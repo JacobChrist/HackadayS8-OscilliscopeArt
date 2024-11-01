@@ -3,7 +3,7 @@
 /* DAC Functions */
 ///////////////////
 
-uint8_t dac_cs = 17;
+uint8_t dac_cs = 13;
 uint8_t dac_load = 16;
 
 SPISettings spisettings(2000000, MSBFIRST, SPI_MODE0);
@@ -29,10 +29,10 @@ void dac_MCP49xx (uint8_t channel, uint8_t value) {
   output_2 = output_2 << 4;
 
   // Start an SPI transmission with the assigned spisettings
-  SPI.beginTransaction(spisettings);  
-  SPI.transfer(output_1);
-  SPI.transfer(output_2);
-  SPI.endTransaction(); // End a transmission
+  SPI1.beginTransaction(spisettings);  
+  SPI1.transfer(output_1);
+  SPI1.transfer(output_2);
+  SPI1.endTransaction(); // End a transmission
   digitalWrite(dac_cs, HIGH);
 }
 

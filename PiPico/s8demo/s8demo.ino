@@ -4,13 +4,13 @@
 void setup() {
   // These instruction inform the Pico Pi SPI library which
   // pins to use for SPI communications.
-  SPI.setRX(0);    // Ignored: we are not receiving any data
-  SPI.setCS(1);    // Ignored: when software controlled CS
-  SPI.setSCK(18);  // Serial Clock
-  SPI.setTX(19);   // MOSI Serial Data
+  //SPI.setRX(0);    // Ignored: we are not receiving any data
+  //SPI.setCS(1);    // Ignored: when software controlled CS
+  SPI1.setSCK(14);  // Serial Clock
+  SPI1.setTX(15);   // MOSI Serial Data
 
   dac_init();
-  SPI.begin(false);  // false means CS in software controlled
+  SPI1.begin(false);  // false means CS in software controlled
   pinMode(dac_cs, OUTPUT);
 
   while(!BOOTSEL)
