@@ -10,5 +10,5 @@ This repo contains supporting schematics, code and spreadsheets (or at least tha
 
 Be sure to use the Earle Philhower library for the Pi Pico with the Arduino IDE.  You must press the boot button when powering the board to program it the first time when using the Arduino IDE.
 
-When you clone use the repo use the "sip-header-code" branch if you want to use it with the S8 Hackaday Badge
+When you clone the repo use the "sip-header-code" branch if you want to use it with the S8 Hackaday Badge
 
